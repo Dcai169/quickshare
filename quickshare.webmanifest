@@ -28,12 +28,12 @@
         }
     ],
 
-    "start_url": "https://dcai169.github.io/quickshare/about/",
+    "start_url": "https://dcai169.github.io/quickshare/about",
     "theme_color": "#FFFFFF",
     "background_color": "#FFFFFF",
 
     "share_target": {
-        "action": "https://dcai169.github.io/quickshare/",
+        "action": "https://dcai169.github.io/quickshare",
         "method": "GET",
         "params": {
             "title": "title",
