@@ -4,6 +4,8 @@
     "display": "standalone",
     "lang": "en",
     "orientation": "any",
+    "description": "Share with a QR code",
+    "scope": "/",
 
     "icons": [
         {
@@ -28,12 +30,12 @@
         }
     ],
 
-    "start_url": "https://dcai169.github.io/quickshare/about",
+    "start_url": "/quickshare/about",
     "theme_color": "#FFFFFF",
     "background_color": "#FFFFFF",
 
     "share_target": {
-        "action": "https://dcai169.github.io/quickshare",
+        "action": "/quickshare",
         "method": "GET",
         "params": {
             "title": "title",

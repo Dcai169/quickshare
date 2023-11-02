@@ -16,7 +16,6 @@ addEventListener("DOMContentLoaded", () => {
     let text = urlParams.get('text');
     let destinationURL = urlParams.get('dest');
 
-    alert(`title: ${label}\ntext: ${text}\nurl: ${destinationURL}`);
 
     if (destinationURL) {
         codeObj.makeCode(destinationURL);
