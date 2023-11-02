@@ -11,12 +11,19 @@ addEventListener("DOMContentLoaded", () => {
         width: codeWidth, height: codeWidth
     });
 
-    let destinationURL = new URL(window.location.toLocaleString()).searchParams.get('dest');
+    let urlParams = new URL(window.location.toLocaleString()).searchParams;
+    let label = urlParams.get('title');
+    let destinationURL = urlParams.get('dest');
 
     if (destinationURL) {
         codeObj.makeCode(destinationURL);
         codeLabel.href = destinationURL;
-        codeLabel.innerText = destinationURL;
+
+        if (label) {
+            codeLabel.innerText = label;
+        } else {
+            codeLabel.innerText = destinationURL;
+        }
     }
 });
 
