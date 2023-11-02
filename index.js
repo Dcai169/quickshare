@@ -19,9 +19,9 @@ addEventListener("DOMContentLoaded", () => {
 
     if (text.match(urlRegex)) {
         codeObj.makeCode(text);
-        codeLabel.href = text;
 
         if (label) {
+            codeLabel.href = text;
             codeLabel.innerText = label;
         }
     }
