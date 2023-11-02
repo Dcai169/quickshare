@@ -1,0 +1,11 @@
+body {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    font-family: 'Sarabun';
+    font-size: 32px;
+}
+
+#qrLink {
+    font-size: 90%;
+}

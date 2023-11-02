@@ -1,0 +1,43 @@
+{
+    "name": "QuickShare",
+    "short_name": "QuickShare",
+    "display": "standalone",
+    "lang": "en",
+    "orientation": "any",
+
+    "icons": [
+        {
+            "src": "icons/192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "icons/384.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },
+        {
+            "src": "icons/512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "icons/1024.png",
+            "type": "image/png",
+            "sizes": "1024x1024"
+        }
+    ],
+
+    "start_url": "https://dcai169.github.io/quickshare/about",
+    "theme_color": "#FFFFFF",
+    "background_color": "#FFFFFF",
+
+    "share_target": {
+        "action": "https://dcai169.github.io/quickshare",
+        "method": "GET",
+        "params": {
+            "url": "dest"
+        },
+        "enctype": "application/x-www-form-urlencoded"
+    }
+}
