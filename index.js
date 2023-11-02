@@ -23,8 +23,6 @@ addEventListener("DOMContentLoaded", () => {
 
         if (label) {
             codeLabel.innerText = label;
-        } else {
-            codeLabel.innerText = text;
         }
     }
 });
