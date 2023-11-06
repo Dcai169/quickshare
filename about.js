@@ -16,7 +16,7 @@ addEventListener("DOMContentLoaded", async () => {
         const relatedApps = await navigator.getInstalledRelatedApps();
         relatedApps.forEach((app) => {
           //if your PWA exists in the array it is installed
-          installButton.disabled = true;
+          installButton.style.display = 'none';
         });
       }
 
