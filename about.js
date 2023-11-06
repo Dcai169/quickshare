@@ -5,7 +5,9 @@ addEventListener("DOMContentLoaded", async () => {
     installButton.addEventListener("click", installApp);
 
     if (clientPlatform == "Android" || clientPlatform == "ChromeOS") {
-        installButton.disabled = false;
+        installButton.style.display = 'block';
+    } else {
+        installButton.style.display = 'none';
     }
 
     let deferredPrompt;
