@@ -4,7 +4,7 @@ addEventListener("DOMContentLoaded", async () => {
 
     installButton.addEventListener("click", installApp);
 
-    if (navigator.userAgentData.includes("Android") || navigator.userAgentData.includes("CrOS X86_64")) {
+    if (navigator.userAgent.includes("Android") || navigator.userAgent.includes("CrOS X86_64")) {
         installButton.style.display = 'block';
         availabilityText.style.display = 'none';
     } else {
