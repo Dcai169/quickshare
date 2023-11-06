@@ -3,7 +3,13 @@ body {
     place-items: center;
     margin: 0;
     font-family: 'Sarabun';
-    font-size: 32px;
+    font-size: 2em;
+}
+
+#installButton {
+    padding: 0.5em;
+    margin: 0.25em;
+    font-size: 1em;
 }
 
 #qrLink {
@@ -11,5 +17,9 @@ body {
 }
 
 #attributions {
-    font-size: 80%;
+    font-size: 60%;
+}
+
+#header {
+    margin-bottom: 0.25em;
 }
