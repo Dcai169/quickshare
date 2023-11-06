@@ -33,7 +33,7 @@ addEventListener("DOMContentLoaded", async () => {
                 // showResult('😟 User dismissed the install prompt');
             }
             // We hide the install button
-            document.querySelector("#install").style.display = "none";
+            installButton.style.display = "none";
 
         }
     }
