@@ -1,5 +1,4 @@
 addEventListener("DOMContentLoaded", async () => {
-    let clientPlatform = navigator?.userAgentData.platform;
     let installButton = document.getElementById("installButton");
 
     installButton.addEventListener("click", installApp);
@@ -11,7 +10,6 @@ addEventListener("DOMContentLoaded", async () => {
     }
 
     let deferredPrompt;
-
     window.addEventListener('beforeinstallprompt', (e) => {
         // Prevents the default mini-infobar or install dialog from appearing on mobile
         e.preventDefault();
