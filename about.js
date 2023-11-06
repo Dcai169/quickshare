@@ -1,14 +1,24 @@
 addEventListener("DOMContentLoaded", async () => {
-    let clientPlatform = navigator?.userAgentData.platform;
     let installButton = document.getElementById("installButton");
+    let availabilityText = document.getElementById("availability");
 
     installButton.addEventListener("click", installApp);
 
-    if (clientPlatform == "Android" || clientPlatform == "ChromeOS") {
+    if (navigator.userAgentData.includes("Android") || navigator.userAgentData.includes("CrOS X86_64")) {
         installButton.style.display = 'block';
+        availabilityText.style.display = 'none';
     } else {
         installButton.style.display = 'none';
+        availabilityText.style.display = 'block';
     }
+
+    if ('getInstalledRelatedApps' in window.navigator) {
+        const relatedApps = await navigator.getInstalledRelatedApps();
+        relatedApps.forEach((app) => {
+          //if your PWA exists in the array it is installed
+          installButton.style.display = 'none';
+        });
+      }
 
     let deferredPrompt;
 
@@ -18,7 +28,12 @@ addEventListener("DOMContentLoaded", async () => {
         // Save the event because you’ll need to trigger it later.
         deferredPrompt = e;
         // Show your customized install prompt for your PWA
-        alert('BeforeInstallPromptEvent');
+        installButton.style.display = "block";
+        installButton.disabled = false;
+    });
+
+    window.addEventListener('appinstalled', () => {
+        installButton.style.display = "none";
     });
 
     async function installApp() {
@@ -34,9 +49,6 @@ addEventListener("DOMContentLoaded", async () => {
             } else if (outcome === 'dismissed') {
                 // showResult('😟 User dismissed the install prompt');
             }
-            // We hide the install button
-            document.querySelector("#install").style.display = "none";
-
         }
     }
 });
