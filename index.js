@@ -3,7 +3,7 @@ addEventListener("DOMContentLoaded", () => {
     let codeWidth = screenSmallDimension * 0.6;
     let codeElement = document.getElementById("qr");
     let codeLabel = document.getElementById("qrLink");
-    let urlRegex = new RegExp(/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi);
+    let urlRegex = new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi);
 
     codeElement.style.width = `${codeWidth}px`;
     codeElement.style.height = `${codeWidth}px`;
