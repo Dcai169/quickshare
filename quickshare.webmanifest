@@ -43,10 +43,5 @@
             "url": "dest"
         },
         "enctype": "application/x-www-form-urlencoded"
-    },
-
-    "related_applications": [{
-        "platform": "webapp",
-        "url": "https://dcai169.github.io/quickshare/manifest.json"
-      }]
+    }
 }
