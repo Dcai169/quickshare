@@ -16,7 +16,7 @@ addEventListener("DOMContentLoaded", async () => {
         // Save the event because you’ll need to trigger it later.
         deferredPrompt = e;
         // Show your customized install prompt for your PWA
-        alert('BeforeInstallPromptEvent');
+        // alert('BeforeInstallPromptEvent');
     });
 
     async function installApp() {
