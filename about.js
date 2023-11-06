@@ -1,10 +1,12 @@
-addEventListener("DOMContentLoaded", () => {
+addEventListener("DOMContentLoaded", async () => {
     let clientPlatform = navigator?.userAgentData.platform;
     let installButton = document.getElementById("installButton");
 
-    window.addEventListener("DOMContentLoaded", async event => {
-        installButton.addEventListener("click", installApp);
-    });
+    installButton.addEventListener("click", installApp);
+
+    if (clientPlatform == "Android" || clientPlatform == "ChromeOS") {
+        installButton.disabled = false;
+    }
 
     let deferredPrompt;
 
@@ -14,9 +16,7 @@ addEventListener("DOMContentLoaded", () => {
         // Save the event because you’ll need to trigger it later.
         deferredPrompt = e;
         // Show your customized install prompt for your PWA
-        if (clientPlatform == "Android" || clientPlatform == "ChromeOS") {
-            installButton.disabled = false;
-        }
+        alert('BeforeInstallPromptEvent');
     });
 
     async function installApp() {
