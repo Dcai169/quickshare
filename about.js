@@ -12,13 +12,13 @@ addEventListener("DOMContentLoaded", async () => {
         availabilityText.style.display = 'block';
     }
 
-    if ('getInstalledRelatedApps' in window.navigator) {
-        const relatedApps = await navigator.getInstalledRelatedApps();
-        relatedApps.forEach((app) => {
-          //if your PWA exists in the array it is installed
-          installButton.disabled = true;
-        });
-      }
+    // if ('getInstalledRelatedApps' in window.navigator) {
+    //     const relatedApps = await navigator.getInstalledRelatedApps();
+    //     relatedApps.forEach((app) => {
+    //         //if your PWA exists in the array it is installed
+    //         installButton.disabled = true;
+    //     });
+    // }
 
     let deferredPrompt;
 
